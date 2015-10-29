@@ -9,9 +9,9 @@ class Player
     @hit_points = DEFAULT_HIT_POINTS
   end
 
-  def attack(player)
-    player.cause_damage
-  end
+  # def attack(player)
+  #   player.cause_damage
+  # end
 
   def cause_damage
     self.hit_points -= 20

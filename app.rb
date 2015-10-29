@@ -27,6 +27,12 @@ class Battle_2 < Sinatra::Base
     erb(:attack)
   end
 
+  get '/switch_turn' do
+    @game = $game
+    @game.switch_turn
+    redirect to('/play')
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

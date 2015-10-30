@@ -1,5 +1,7 @@
 require 'spec_helper.rb'
 
+  # let (:player) {double(:player, :hit_points => 15)}
+
 feature 'Attack' do
   scenario 'attack player Aaron' do
     sign_in_and_play
@@ -18,5 +20,11 @@ feature 'Attack' do
     click_link('Attack Aaron')
     click_link('Switch Turn')
     expect(page).to have_content 'Attack Ivan'
+  end
+
+  scenario 'losing game when hit points is zero' do
+    next_turn_loses
+    click_link('Attack Aaron')
+    expect(page).to have_content 'Aaron has lost'
   end
 end

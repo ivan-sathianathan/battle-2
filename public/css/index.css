@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+
+}
+
+#image {
+    /*background-image: url("/images/background.jpg");*/
+    width: 1000px;
+    height: 1250px;
+    text-align: center;
+}
+
+image img {
+    max-width: 100%;
+    max-height: 100%;
+    /*display:block;
+    margin:auto;*/
+}
